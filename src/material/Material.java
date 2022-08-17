@@ -1,6 +1,8 @@
+package material;
+
 import java.time.LocalDate;
 
-public abstract class Masterial {
+public abstract class Material {
     public String getId() {
         return id;
     }
@@ -35,7 +37,7 @@ public abstract class Masterial {
 
     public String id;
 
-    public Masterial(String id, String name, LocalDate manufacturingDate, int cost) {
+    public Material(String id, String name, LocalDate manufacturingDate, int cost) {
         this.id = id;
         this.name = name;
         this.manufacturingDate = manufacturingDate;
@@ -47,5 +49,6 @@ public abstract class Masterial {
     int cost;
 
     public abstract double getAmount();
+    public abstract LocalDate getExpiryDate();
 }
 
